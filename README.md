@@ -14,12 +14,37 @@ Scrobble music from **YouTube Music**, **SoundCloud** and **Apple Music** to you
 
 ## Install
 
+### Firefox and Zen
+
 Requires Firefox 140 or newer.
 
-**Firefox Add-ons:** [link](https://addons.mozilla.org/en-US/firefox/addon/trackmark/)
+**[Get Trackmark on Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/trackmark/)**
 
-Click the toolbar icon, choose **Connect Last.fm**, and approve access on the Last.fm page. The tab closes automatically and the popup shows your username. Tabs open before installation need a reload.
+### Chrome, Edge and Brave
 
+Not on the Chrome Web Store yet. You can build it from source and load it manually:
+
+1. Get a free Last.fm API key and secret at [last.fm/api/account/create](https://www.last.fm/api/account/create).
+2. Build the extension:
+```bash
+   git clone https://github.com/hellblazeerr/trackmark.git
+   cd trackmark
+   bun install
+   cp .env.example .env.local   # add WXT_LASTFM_API_KEY and WXT_LASTFM_API_SECRET
+   bun run build                # output: .output/chrome-mv3
+```
+3. Open `chrome://extensions` and turn on **Developer mode**.
+4. Click **Load unpacked** and select the `.output/chrome-mv3` folder.
+
+Unpacked extensions don't update automatically, so pull and rebuild to get new versions.
+
+### Getting started
+
+1. Click the toolbar icon and choose **Connect Last.fm**.
+2. Approve access on the Last.fm page. The tab closes by itself and the popup shows your username.
+3. Play a track on YouTube Music, SoundCloud or Apple Music.
+
+Tabs that were already open when you installed need a reload.
 ## How scrobbling works
 
 - A track is scrobbled after **50% of its length or 4 minutes**, whichever comes first.
