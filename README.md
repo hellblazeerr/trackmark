@@ -16,7 +16,7 @@ Scrobble music from **YouTube Music**, **SoundCloud** and **Apple Music** to you
 
 Requires Firefox 140 or newer.
 
-**Firefox Add-ons:** _link coming soon_
+**Firefox Add-ons:** [link](https://addons.mozilla.org/en-US/firefox/addon/trackmark/)
 
 Click the toolbar icon, choose **Connect Last.fm**, and approve access on the Last.fm page. The tab closes automatically and the popup shows your username. Tabs open before installation need a reload.
 
